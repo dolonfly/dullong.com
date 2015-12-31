@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[菜鸟小院]]></title>
+  <subtitle><![CDATA[杜龙龙的博客]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://www.dullong.com/"/>
+  <updated>2015-12-31T15:00:38.000Z</updated>
+  <id>http://www.dullong.com/</id>
+  
+  <author>
+    <name><![CDATA[dll]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[简历]]></title>
+    <link href="http://www.dullong.com/resume/"/>
+    <id>http://www.dullong.com/resume/</id>
+    <published>2015-12-28T14:00:33.000Z</published>
+    <updated>2015-12-31T15:00:38.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="u8054_u7CFB_u65B9_u5F0F"><a href="#u8054_u7CFB_u65B9_u5F0F" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
+<li><p>手机：185-2156-5321</p>
+</li>
+<li><p>Email：kaixin890312@163.com</p>
+</li>
+<li><p>住址：上海嘉定</p>
+</li>
+</ul>
+<hr>
+<h1 id="u4E2A_u4EBA_u4FE1_u606F"><a href="#u4E2A_u4EBA_u4FE1_u606F" class="headerlink" title="个人信息"></a>个人信息</h1><ul>
+<li><p>杜龙龙/男/1989 </p>
+</li>
+<li><p>本科/中原工学院计算机科学系 </p>
+</li>
+<li><p>期望职位：java / 全栈</p>
+</li>
+<li><p>期望薪资：20k</p>
+</li>
+<li><p>期望城市：上海</p>
+</li>
+</ul>
+<hr>
+<h1 id="u4E2A_u4EBA_u603B_u7ED3"><a href="#u4E2A_u4EBA_u603B_u7ED3" class="headerlink" title="个人总结"></a>个人总结</h1><p>技术宅、爱钻研、好奇心、爱学习、接收新技术快、认为语言只是工具，思想最重要</p>
+<a id="more"></a>
+<h1 id="u5DE5_u4F5C_u7ECF_u5386"><a href="#u5DE5_u4F5C_u7ECF_u5386" class="headerlink" title="工作经历"></a>工作经历</h1><h2 id="u4E0A_u6D77_u5494_u5693_u5144_u5F1F_u79D1_u6280_u6709_u9650_u516C_u53F8_uFF082015_u5E744_u6708__7E_2015_u5E7412_u6708_uFF09"><a href="#u4E0A_u6D77_u5494_u5693_u5144_u5F1F_u79D1_u6280_u6709_u9650_u516C_u53F8_uFF082015_u5E744_u6708__7E_2015_u5E7412_u6708_uFF09" class="headerlink" title="上海咔嚓兄弟科技有限公司（2015年4月 ~ 2015年12月）"></a>上海咔嚓兄弟科技有限公司（2015年4月 ~ 2015年12月）</h2><p>本人在任职期间，主要进行如下相关工作</p>
+<ul>
+<li><p>爬虫硬件网络搭建</p>
+</li>
+<li><p>爬虫系统编码维护工作</p>
+</li>
+<li><p>图像检索标注分类管理系统（SOT）</p>
+</li>
+<li><p>商城推荐系统（kc-mall）的部分编码工作</p>
+</li>
+<li><p>业余时间内部图书管理系统服务端(node)及移动端(iOS)的开发</p>
+</li>
+</ul>
+<p>主要贡献</p>
+<ul>
+<li><p>成功抓取千万级电商数据，极大丰富了产品库，并为图像训练搜索打下坚实基础</p>
+</li>
+<li><p>SOT提供的基础标注数据对图像训练精度有很大提升</p>
+</li>
+<li><p>kc-mall中为运营人员提供后台编辑功能，减少了发布难度及工作量；OSS插件减少上传复杂度及图片维护复杂度；并提供两个模块的api供移动端调用。</p>
+</li>
+<li><p>图书管理系统减少了行政管理书籍的难度，为员工查书及买书提供方便</p>
+</li>
+</ul>
+<h3 id="u7F51_u7EDC_u722C_u866B_u7CFB_u7EDF_uFF08crawler-slave_uFF09"><a href="#u7F51_u7EDC_u722C_u866B_u7CFB_u7EDF_uFF08crawler-slave_uFF09" class="headerlink" title="网络爬虫系统（crawler-slave）"></a>网络爬虫系统（crawler-slave）</h3><p>本系统作为爬虫系统的一部分，受<code>master</code>端进行调度。主要接收<code>master</code>分配的任务并抓取解析相关电商网站图片及文字等资源。本人负责本项目的所有编码设计工作。</p>
+<p>服务架构：java + webmagic + httpclient + jsoup + maven + mysql</p>
+<p>架构组成：</p>
+<ul>
+<li><p>dao：抽象并封装与数据库间的交互</p>
+</li>
+<li><p>domain：一些简单的类(pojo)</p>
+</li>
+<li><p>downloader：下载模块，负责请求uri并进行下载给<code>processor</code>解析</p>
+</li>
+<li><p>pageProcessor：解析处理<code>downloader</code>模块下载的文本及图片资源</p>
+</li>
+<li><p>pipeline：负责持久化<code>processor</code>解析后的结构化数据及图片资源</p>
+</li>
+<li><p>scheduler：队列，给<code>downloader</code>提供url</p>
+</li>
+<li><p>utils：其他一些公共工具类</p>
+</li>
+</ul>
+<h3 id="u56FE_u50CF_u68C0_u7D22_u6807_u6CE8_u5206_u7C7B_u7BA1_u7406_u7CFB_u7EDF_uFF08SOT_uFF09"><a href="#u56FE_u50CF_u68C0_u7D22_u6807_u6CE8_u5206_u7C7B_u7BA1_u7406_u7CFB_u7EDF_uFF08SOT_uFF09" class="headerlink" title="图像检索标注分类管理系统（SOT）"></a>图像检索标注分类管理系统（SOT）</h3><p>本系统主要维护各种第三方网站分类及自有分类，为其他系统提供基础数据。本人编码并维护除了用户管理外的其他功能，并编写对应的测试代码。</p>
+<p>服务架构：node.js + express + ejs + mocha +mongo</p>
+<p>基本功能：</p>
+<ul>
+<li><p>用户管理：创建用户、登陆功能</p>
+</li>
+<li><p>类别关系管理：查看并修改多种类别对应关系</p>
+</li>
+<li><p>各电商分类管理：管理编辑各大电商分类数据</p>
+</li>
+<li><p>自有类别管理：创建修改自有类别</p>
+</li>
+<li><p>日志管理：记录上面各功能操作日志，方便追踪回滚</p>
+</li>
+</ul>
+<h3 id="u5546_u57CE_u63A8_u8350_u7CFB_u7EDF_uFF08kc-mall_uFF09"><a href="#u5546_u57CE_u63A8_u8350_u7CFB_u7EDF_uFF08kc-mall_uFF09" class="headerlink" title="商城推荐系统（kc-mall）"></a>商城推荐系统（kc-mall）</h3><p>本系统作为一个内部的系统，主要供运营人员进行编辑并给移动端提供api服务。主要基于node.js、bootstrap、markdown，本人主要编码并维护上传控件、条幅及精品推荐相关代码及测试。</p>
+<p>服务架构：node.js + express + jade + mocha +mongo</p>
+<p>基本功能：</p>
+<ul>
+<li><p>消息管理：提供页面供用户编辑推送消息，并提供相关api给移动端</p>
+</li>
+<li><p>文章管理：提供文章创建(markdown)、编辑及预览功能，集成图片上传控件(jquery插件方式、上传至oss)</p>
+</li>
+<li><p>资源管理：图片资源管理，提供上传文件并插入文章等相应位置</p>
+</li>
+<li><p>条幅管理：条幅创建、修改、激活等相关操作，并提供相关api</p>
+</li>
+<li><p>精品推荐：精品推荐资源的创建、修改及激活操作，并提供相关api</p>
+</li>
+</ul>
+<h2 id="u521B_u65B0_u5DE5_u573A__B7__u4E0A_u6D77_u95EE_u5427_u79D1_u6280__uFF08_2014_u5E746_u6708__7E_2015_u5E743_u6708_uFF09"><a href="#u521B_u65B0_u5DE5_u573A__B7__u4E0A_u6D77_u95EE_u5427_u79D1_u6280__uFF08_2014_u5E746_u6708__7E_2015_u5E743_u6708_uFF09" class="headerlink" title="创新工场 · 上海问吧科技 （ 2014年6月 ~ 2015年3月）"></a>创新工场 · 上海问吧科技 （ 2014年6月 ~ 2015年3月）</h2><p>本人在任职期间，主要进行如下相关工作</p>
+<ul>
+<li><p>采集互联网公开/半公开的试题资源</p>
+</li>
+<li><p>采集并下载百度文库中所有教育相关文档</p>
+</li>
+<li><p>解析文档(word、pdf)中试题为结构化数据</p>
+</li>
+</ul>
+<p>主要贡献</p>
+<ul>
+<li><p>成功抓取近千万结构化题目信息</p>
+</li>
+<li><p>提取文档中题目、解析、答案等信息，有效正确率达到95%</p>
+</li>
+</ul>
+<h3 id="u6570_u636E_u6293_u53D6"><a href="#u6570_u636E_u6293_u53D6" class="headerlink" title="数据抓取"></a>数据抓取</h3><p>在本项目中，我主要的任务是搜集互联网上的试题信息，并进行采集入库操作。作为数据采集的核心成员，不仅按时的完成了指定工作，还利用空闲时间完成了采集框架的集成开发，大大提高了数据抓取的速度及质量。</p>
+<h3 id="u7535_u5B50_u6587_u6863_u89E3_u6790"><a href="#u7535_u5B50_u6587_u6863_u89E3_u6790" class="headerlink" title="电子文档解析"></a>电子文档解析</h3><p>在各家数据处于统一化之时，我承担起了解析电子文档的工作。利用以前积累的文档解析、dom解析等技能，通过一系列算法，将各种电子文档中的有效信息进行筛选提取，生成结构化数据，丰富了公司题库。</p>
+<h3 id="u5176_u4ED6_u9879_u76EE"><a href="#u5176_u4ED6_u9879_u76EE" class="headerlink" title="其他项目"></a>其他项目</h3><p>另外，利用工作之余，为了简化工作，自己制作了内部数据展示平台，抓取控制平台，提高了数据抓取的效率及数据质量。</p>
+<h2 id="u5317_u4EAC_u8D85_u661F_u90D1_u5DDE_u7814_u7A76_u6240__uFF08_2013_u5E747_u6708__7E_2014_u5E745_u6708__uFF09"><a href="#u5317_u4EAC_u8D85_u661F_u90D1_u5DDE_u7814_u7A76_u6240__uFF08_2013_u5E747_u6708__7E_2014_u5E745_u6708__uFF09" class="headerlink" title="北京超星郑州研究所 （ 2013年7月 ~ 2014年5月 ）"></a>北京超星郑州研究所 （ 2013年7月 ~ 2014年5月 ）</h2><p>本人在任职期间，主要进行如下相关工作</p>
+<ul>
+<li><p>管理团队(技术)</p>
+</li>
+<li><p>采集并下载互联网公开百科、文档数据</p>
+</li>
+<li><p>负责文档管理系统并实现接口部分</p>
+</li>
+</ul>
+<p>主要贡献</p>
+<ul>
+<li><p>团队出色提前完成任务</p>
+</li>
+<li><p>获取上亿条百科、文档数据，为总部提供充足数据</p>
+</li>
+<li><p>简化了日报周报记录统计方式</p>
+</li>
+<li><p>集成Lucene并提供api给客户端调用</p>
+</li>
+</ul>
+<h3 id="u6570_u636E_u91C7_u96C6"><a href="#u6570_u636E_u91C7_u96C6" class="headerlink" title="数据采集"></a>数据采集</h3><p>利用爬虫技术，抓取互联网上有效信息，丰富自己的资源库。做为项目的负责人，从刚开始的一个人到后来的十几个人，学到了许多。</p>
+<h3 id="u5468_u62A5_u65E5_u5FD7_u7BA1_u7406_u7CFB_u7EDF"><a href="#u5468_u62A5_u65E5_u5FD7_u7BA1_u7406_u7CFB_u7EDF" class="headerlink" title="周报日志管理系统"></a>周报日志管理系统</h3><p>为了及时有效的分析团队日志及周报信息，利用ssh技术做了一个简单的记录各人日志周报信息的应用。方便了项目负责人对各成员的了解及整体进度把控。</p>
+<h2 id="u6587_u6863_u6587_u732E_u7BA1_u7406_u7CFB_u7EDF__uFF08_2012_u5E746_u6708__7E_2013_u5E741_u6708__uFF09"><a href="#u6587_u6863_u6587_u732E_u7BA1_u7406_u7CFB_u7EDF__uFF08_2012_u5E746_u6708__7E_2013_u5E741_u6708__uFF09" class="headerlink" title="文档文献管理系统 （ 2012年6月 ~ 2013年1月 ）"></a>文档文献管理系统 （ 2012年6月 ~ 2013年1月 ）</h2><p>本项目主要利用B/S+C/S架构，将对放的所有电子档案利用lucene等搜索技术进行索引并进行全文检索，提供web端及桌面端。本系统主要使用到了Lucene、itext、jquery等技术。</p>
+<p>做为项目的负责人，在项目中的主要职责为：系统的整体设计，pdf文档内容抽取，索引建立、全文检索及相关api接口的设计及实现。</p>
+<p>主要功能</p>
+<ul>
+<li><p>提取多种格式文档中内容</p>
+</li>
+<li><p>文档索引建立及检索</p>
+</li>
+<li><p>web端及桌面端(c#)</p>
+</li>
+</ul>
+<h2 id="u6CB3_u5357_u5C71_u8C37_u7F51_u7EDC_u516C_u53F8_uFF08_2011_u5E746_u6708__7E_2012_u5E7410_u6708__uFF09"><a href="#u6CB3_u5357_u5C71_u8C37_u7F51_u7EDC_u516C_u53F8_uFF08_2011_u5E746_u6708__7E_2012_u5E7410_u6708__uFF09" class="headerlink" title="河南山谷网络公司（ 2011年6月 ~ 2012年10月 ）"></a>河南山谷网络公司（ 2011年6月 ~ 2012年10月 ）</h2><p>本人在任职期间，主要进行如下相关工作</p>
+<ul>
+<li><p>搜集新闻资源，并进行简单语义分析</p>
+</li>
+<li><p>采集框架编写</p>
+</li>
+</ul>
+<p>主要贡献</p>
+<ul>
+<li><p>采集百万级新闻素材供分析使用</p>
+</li>
+<li><p>提供舆情信息的初步预警，为后期深层次分析提供素材</p>
+</li>
+</ul>
+<h3 id="u8206_u60C5_u5206_u6790"><a href="#u8206_u60C5_u5206_u6790" class="headerlink" title="舆情分析"></a>舆情分析</h3><p>本系统主要是搜集互联网上的各种公开资源，并对其进行抓取及语义分析，对敏感信息进行预警操作。</p>
+<p>在本系统中，我的职责主要为：采集主框架编写及几个网站插件的编写；关键词初步预警处理。</p>
+<hr>
+<h1 id="u5F00_u6E90_u9879_u76EE_u548C_u4F5C_u54C1"><a href="#u5F00_u6E90_u9879_u76EE_u548C_u4F5C_u54C1" class="headerlink" title="开源项目和作品"></a>开源项目和作品</h1><ul>
+<li><a href="https://github.com/dolonfly/book-store" target="_blank" rel="external">book-store</a> : 一个通过api查询图书信息的简单系统，node.js开发</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dolonfly/book-library" target="_blank" rel="external">book-library</a>  : 图书管理系统服务端，提供相关api，node.js开发</li>
+</ul>
+<ul>
+<li><a href="https://github.com/dolonfly/book-library-ios" target="_blank" rel="external">book-library-ios</a>  : 图书管理系统iOS端</li>
+</ul>
+<ul>
+<li><a href="http://git.oschina.net/dll/FireDocManager" target="_blank" rel="external">FireDocManager</a>   : 一个基于Lucene的电子档案文档全文检索系统，在优化传统的档案管理上基础上增加了全文检索功能。</li>
+</ul>
+<ul>
+<li><a href="https://coding.net/u/idea/p/simple-blog/git" target="_blank" rel="external">simple-blog</a>   :  simple-blog是一个基于springmvc开发的博客系统</li>
+</ul>
+<h1 id="u6280_u80FD_u6E05_u5355"><a href="#u6280_u80FD_u6E05_u5355" class="headerlink" title="技能清单"></a>技能清单</h1><p>以下均为我熟练使用的技能</p>
+<ul>
+<li><p>精通：Java，网络爬虫</p>
+</li>
+<li><p>掌握语言：C，C＃，JavaScript，，iOS，HTML，CSS，MySQL，MarkDown</p>
+</li>
+<li><p>Web开发：java web/Spring mvc/ssh/node.js</p>
+</li>
+<li><p>前端框架：Bootstrap</p>
+</li>
+<li><p>开源框架：httpclient/commons-lang3/jsoup/json/Lucene/DbUtils/lodash/async</p>
+</li>
+<li><p>数据库相关：MySQL/SQLite</p>
+</li>
+<li><p>服务器：tomcat/nginx</p>
+</li>
+<li><p>版本管理、文档和自动化部署工具：Svn/Git/maven</p>
+</li>
+<li><p>单元测试：junit/mocha</p>
+</li>
+<li><p>云和开放平台：BAE/ACE/地图应用开发/微信应用开发/oss</p>
+</li>
+</ul>
+<hr>
+<h1 id="u81F4_u8C22"><a href="#u81F4_u8C22" class="headerlink" title="致谢"></a>致谢</h1><p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
+<p>如果本人不符合贵公司要求，请指出不符合的地方，谢谢。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="u8054_u7CFB_u65B9_u5F0F"><a href="#u8054_u7CFB_u65B9_u5F0F" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
+<li><p>手机：185-2156-5321</p>
+</li>
+<li><p>Email：kaixin890312@163.com</p>
+</li>
+<li><p>住址：上海嘉定</p>
+</li>
+</ul>
+<hr>
+<h1 id="u4E2A_u4EBA_u4FE1_u606F"><a href="#u4E2A_u4EBA_u4FE1_u606F" class="headerlink" title="个人信息"></a>个人信息</h1><ul>
+<li><p>杜龙龙/男/1989 </p>
+</li>
+<li><p>本科/中原工学院计算机科学系 </p>
+</li>
+<li><p>期望职位：java / 全栈</p>
+</li>
+<li><p>期望薪资：20k</p>
+</li>
+<li><p>期望城市：上海</p>
+</li>
+</ul>
+<hr>
+<h1 id="u4E2A_u4EBA_u603B_u7ED3"><a href="#u4E2A_u4EBA_u603B_u7ED3" class="headerlink" title="个人总结"></a>个人总结</h1><p>技术宅、爱钻研、好奇心、爱学习、接收新技术快、认为语言只是工具，思想最重要</p>]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Git 常用命令]]></title>
+    <link href="http://www.dullong.com/Git-Cheat-Sheet-Chinese/"/>
+    <id>http://www.dullong.com/Git-Cheat-Sheet-Chinese/</id>
+    <published>2015-11-22T04:59:33.000Z</published>
+    <updated>2015-12-31T14:56:50.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="u521B_u5EFA"><a href="#u521B_u5EFA" class="headerlink" title="创建"></a>创建</h3><p>复制一个已创建的仓库:<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">ssh</span>://user@domain.com/repo.git</span><br></pre></td></tr></table></figure></p>
+<p>创建一个新的本地仓库:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git init</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="u672C_u5730_u4FEE_u6539"><a href="#u672C_u5730_u4FEE_u6539" class="headerlink" title="本地修改"></a>本地修改</h3><p>显示工作路径下已修改的文件：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git status</span><br></pre></td></tr></table></figure></p>
+<p>显示与上次提交版本文件的不同：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git diff</span><br></pre></td></tr></table></figure></p>
+<p>把当前所有修改添加到下次提交中：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">add </span>.</span><br></pre></td></tr></table></figure></p>
+<p>把对某个文件的修改添加到下次提交中：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">add</span> -p &lt;<span class="built_in">file</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>提交本地的所有修改：<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -<span class="literal">a</span></span><br></pre></td></tr></table></figure></p>
+<p>提交之前已标记的变化：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git commit</span><br></pre></td></tr></table></figure></p>
+<p>附加消息提交：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">commit</span> -<span class="keyword">m</span> <span class="string">'message here'</span></span></span><br></pre></td></tr></table></figure></p>
+<p>Commit to some previous date:<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --date=<span class="string">"<span class="escape">`d</span>ate --date='n day ago'<span class="escape">`"</span> -am "</span>Commit Message<span class="string">"</span></span><br></pre></td></tr></table></figure></p>
+<p>修改上次提交<br><br><em><sub>Don’t amend published commits!</sub></em><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">commit</span> <span class="comment">--amend</span></span></span><br></pre></td></tr></table></figure></p>
+<p>把当前分支中未提交的修改移动到其他分支<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">git</span> stash</span><br><span class="line"><span class="label">git</span> checkout <span class="keyword">branch2</span><br><span class="line"></span><span class="label">git</span> stash <span class="keyword">pop</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u641C_u7D22"><a href="#u641C_u7D22" class="headerlink" title="搜索"></a>搜索</h3><p>从当前目录的所有文件中查找文本内容：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git grep <span class="string">"Hello"</span></span><br></pre></td></tr></table></figure></p>
+<p>在某一版本中搜索文本：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git grep <span class="string">"Hello"</span> <span class="literal">v2</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="u63D0_u4EA4_u5386_u53F2"><a href="#u63D0_u4EA4_u5386_u53F2" class="headerlink" title="提交历史"></a>提交历史</h3><p>从最新提交开始，显示所有的提交记录（显示hash， 作者信息，提交的标题和时间）：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span></span><br></pre></td></tr></table></figure></p>
+<p>显示所有提交（仅显示提交的hash和message）：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span> <span class="comment">--oneline</span></span><br></pre></td></tr></table></figure></p>
+<p>显示某个用户的所有提交：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span> <span class="comment">--author="username"</span></span><br></pre></td></tr></table></figure></p>
+<p>显示某个文件的所有修改：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span> -p &lt;<span class="type">file</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>谁，在什么时间，修改了文件的什么内容：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git blame &lt;<span class="type">file</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="u5206_u652F_u4E0E_u6807_u7B7E"><a href="#u5206_u652F_u4E0E_u6807_u7B7E" class="headerlink" title="分支与标签"></a>分支与标签</h3><p>列出所有的分支：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git branch</span><br></pre></td></tr></table></figure></p>
+<p>切换分支：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout <span class="tag">&lt;<span class="title">branch</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>基于当前分支创建新分支：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch &lt;<span class="keyword">new</span>-branch&gt;</span><br></pre></td></tr></table></figure></p>
+<p>基于远程分支创建新的可追溯的分支：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">branch </span>--track &lt;new-<span class="keyword">branch&gt; </span>&lt;remote-<span class="keyword">branch&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>删除本地分支:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">branch </span>-d &lt;<span class="keyword">branch&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>给当前版本打标签：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">tag</span> <span class="title">&lt;tag-name</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="u66F4_u65B0_u4E0E_u53D1_u5E03"><a href="#u66F4_u65B0_u4E0E_u53D1_u5E03" class="headerlink" title="更新与发布"></a>更新与发布</h3><p>列出对当前远程端的操作：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git remote -v</span><br></pre></td></tr></table></figure></p>
+<p>显示远程端的信息：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote show <span class="tag">&lt;<span class="title">remote</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>添加新的远程端：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add <span class="tag">&lt;<span class="title">remote</span>&gt;</span> <span class="tag">&lt;<span class="title">url</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>下载远程端版本，但不合并到HEAD中：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fetch <span class="tag">&lt;<span class="title">remote</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>下载远程端版本，并自动与HEAD版本合并：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote pull <span class="tag">&lt;<span class="title">remote</span>&gt;</span> <span class="tag">&lt;<span class="title">url</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>将远程端版本合并到本地版本中：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull origin <span class="literal">master</span></span><br></pre></td></tr></table></figure></p>
+<p>将本地版本发布到远程端：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push remote <span class="tag">&lt;<span class="title">remote</span>&gt;</span> <span class="tag">&lt;<span class="title">branch</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>删除远程端分支：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">push </span>&lt;remote&gt; :&lt;<span class="keyword">branch&gt; </span>(since Git <span class="literal">v1</span>.<span class="number">5</span>.<span class="number">0</span>)</span><br><span class="line"><span class="label">or</span></span><br><span class="line"><span class="label">git</span> <span class="keyword">push </span>&lt;remote&gt; --delete &lt;<span class="keyword">branch&gt; </span>(since Git <span class="literal">v1</span>.<span class="number">7</span>.<span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
+<p>发布标签:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push <span class="comment">--tags</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="u5408_u5E76_u4E0E_u91CD_u7F6E"><a href="#u5408_u5E76_u4E0E_u91CD_u7F6E" class="headerlink" title="合并与重置"></a>合并与重置</h3><p>将分支合并到当前HEAD中：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge <span class="tag">&lt;<span class="title">branch</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>将当前HEAD版本重置到分支中:<br><br><em><sub>Don’t rebase published commit!</sub></em><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase <span class="tag">&lt;<span class="title">branch</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>退出重置:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase <span class="comment">--abort</span></span><br></pre></td></tr></table></figure></p>
+<p>解决冲突后继续重置：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase --<span class="keyword">continue</span></span><br></pre></td></tr></table></figure></p>
+<p>使用配置好的merge tool 解决冲突：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git mergetool</span><br></pre></td></tr></table></figure></p>
+<p>在编辑器中手动解决冲突后，标记文件为<code>已解决冲突</code><br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">add</span> &lt;resolved-<span class="built_in">file</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">rm</span> &lt;resolved-<span class="keyword">file</span>&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="u64A4_u9500"><a href="#u64A4_u9500" class="headerlink" title="撤销"></a>撤销</h3><p>放弃工作目录下的所有修改：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">reset</span> <span class="comment">--hard HEAD</span></span></span><br></pre></td></tr></table></figure></p>
+<p>移除缓存区的所有文件（i.e. 撤销上次<code>git add</code>）:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">reset</span> <span class="keyword">HEAD</span></span></span><br></pre></td></tr></table></figure></p>
+<p>放弃某个文件的所有本地修改：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout HEAD &lt;<span class="type">file</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>重置一个提交（通过创建一个截然不同的新提交）<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">revert </span>&lt;commit&gt;</span><br></pre></td></tr></table></figure></p>
+<p>将HEAD重置到上一次提交的版本，并放弃之后的所有修改：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">reset</span> <span class="comment">--hard &lt;commit&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>将HEAD重置到上一次提交的版本，并将之后的修改标记为未添加到缓存区的修改：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">reset</span> &lt;<span class="keyword">commit</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>将HEAD重置到上一次提交的版本，并保留未提交的本地修改：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">reset</span> <span class="comment">--keep &lt;commit&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>来源： <a href="https://raw.githubusercontent.com/flyhigher139/Git-Cheat-Sheet/master/Git%20Cheat%20Sheet-Zh.md" target="_blank" rel="external">https://raw.githubusercontent.com/flyhigher139/Git-Cheat-Sheet/master/Git%20Cheat%20Sheet-Zh.md</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="u521B_u5EFA"><a href="#u521B_u5EFA" class="headerlink" title="创建"></a>创建</h3><p>复制一个已创建的仓库:<br><figure class="highlight crmsh"><tabl]]>
+    </summary>
+    
+  </entry>
+  
+</feed>
