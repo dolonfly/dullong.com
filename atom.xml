@@ -4,7 +4,7 @@
   <subtitle><![CDATA[杜龙龙的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dullong.com/"/>
-  <updated>2015-12-31T15:44:41.000Z</updated>
+  <updated>2015-12-31T15:49:13.000Z</updated>
   <id>http://www.dullong.com/</id>
   
   <author>
@@ -19,17 +19,8 @@
     <link href="http://www.dullong.com/resume/"/>
     <id>http://www.dullong.com/resume/</id>
     <published>2015-12-28T14:00:33.000Z</published>
-    <updated>2015-12-31T15:44:41.000Z</updated>
+    <updated>2015-12-31T15:49:13.000Z</updated>
     <content type="html"><![CDATA[<h1 id="u8054_u7CFB_u65B9_u5F0F"><a href="#u8054_u7CFB_u65B9_u5F0F" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
-<li><p>手机：185-2156-5321</p>
-</li>
-<li><p>Email：kaixin890312@163.com</p>
-</li>
-<li><p>住址：上海嘉定</p>
-</li>
-</ul>
-<hr>
-<h1 id="u8054_u7CFB_u65B9_u5F0F-1"><a href="#u8054_u7CFB_u65B9_u5F0F-1" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
 <li><p>手机：185-2156-5321</p>
 </li>
 <li><p>Email：kaixin890312@163.com</p>
@@ -159,6 +150,17 @@
 <li><p>解析文档成结构化试题信息</p>
 </li>
 </ul>
+<h3 id="u6587_u6863_u6587_u732E_u7BA1_u7406_u7CFB_u7EDF"><a href="#u6587_u6863_u6587_u732E_u7BA1_u7406_u7CFB_u7EDF" class="headerlink" title="文档文献管理系统"></a>文档文献管理系统</h3><p>本项目主要利用B/S+C/S架构，将对放的所有电子档案利用lucene等搜索技术进行索引并进行全文检索，提供web端及桌面端。本系统主要使用到了Lucene、itext、jquery等技术。</p>
+<p>做为项目的负责人，在项目中的主要职责为：系统的整体设计，pdf文档内容抽取，索引建立、全文检索及相关api接口的设计及实现。</p>
+<p>主要功能</p>
+<ul>
+<li><p>提取多种格式文档中内容</p>
+</li>
+<li><p>文档索引建立及检索</p>
+</li>
+<li><p>web端及桌面端(c#)</p>
+</li>
+</ul>
 <h2 id="u5317_u4EAC_u8D85_u661F_u90D1_u5DDE_u7814_u7A76_u6240__uFF08_2013_u5E747_u6708__7E_2014_u5E745_u6708__uFF09"><a href="#u5317_u4EAC_u8D85_u661F_u90D1_u5DDE_u7814_u7A76_u6240__uFF08_2013_u5E747_u6708__7E_2014_u5E745_u6708__uFF09" class="headerlink" title="北京超星郑州研究所 （ 2013年7月 ~ 2014年5月 ）"></a>北京超星郑州研究所 （ 2013年7月 ~ 2014年5月 ）</h2><p>本人在任职期间，主要进行如下相关工作</p>
 <ul>
 <li><p>管理团队(技术)</p>
@@ -188,17 +190,6 @@
 <li><p>编写、修改个人日报周报日志</p>
 </li>
 <li><p>负责人查看、统计周报</p>
-</li>
-</ul>
-<h2 id="u6587_u6863_u6587_u732E_u7BA1_u7406_u7CFB_u7EDF__uFF08_2012_u5E746_u6708__7E_2013_u5E741_u6708__uFF09"><a href="#u6587_u6863_u6587_u732E_u7BA1_u7406_u7CFB_u7EDF__uFF08_2012_u5E746_u6708__7E_2013_u5E741_u6708__uFF09" class="headerlink" title="文档文献管理系统 （ 2012年6月 ~ 2013年1月 ）"></a>文档文献管理系统 （ 2012年6月 ~ 2013年1月 ）</h2><p>本项目主要利用B/S+C/S架构，将对放的所有电子档案利用lucene等搜索技术进行索引并进行全文检索，提供web端及桌面端。本系统主要使用到了Lucene、itext、jquery等技术。</p>
-<p>做为项目的负责人，在项目中的主要职责为：系统的整体设计，pdf文档内容抽取，索引建立、全文检索及相关api接口的设计及实现。</p>
-<p>主要功能</p>
-<ul>
-<li><p>提取多种格式文档中内容</p>
-</li>
-<li><p>文档索引建立及检索</p>
-</li>
-<li><p>web端及桌面端(c#)</p>
 </li>
 </ul>
 <h2 id="u6CB3_u5357_u5C71_u8C37_u7F51_u7EDC_u516C_u53F8_uFF08_2011_u5E746_u6708__7E_2012_u5E7410_u6708__uFF09"><a href="#u6CB3_u5357_u5C71_u8C37_u7F51_u7EDC_u516C_u53F8_uFF08_2011_u5E746_u6708__7E_2012_u5E7410_u6708__uFF09" class="headerlink" title="河南山谷网络公司（ 2011年6月 ~ 2012年10月 ）"></a>河南山谷网络公司（ 2011年6月 ~ 2012年10月 ）</h2><p>本人在任职期间，主要进行如下相关工作</p>
