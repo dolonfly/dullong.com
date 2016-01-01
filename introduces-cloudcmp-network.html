@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 小序Cloudcmp的network(网络任务) · 菜鸟小院</title><meta name="description" content="Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    
 对于网络性能，主要是通过tcp吞吐量和延迟来衡量的，因此本部分也是通过测量这两方面的性能来评测不同云平台的网络性能的。
 以下分别对带宽和延迟来分别说明
+
 延迟对于所有的任务来说，每个实现类均集成了基类Task，并实现重写了一些一些方法，而对于重写的方法来说，run()方法是最核心的一个方法。我们这里并不对他类是怎么写的来说明，仅仅说明其是如何实现的这一对延迟进行测量的方法。
 核心代码如下：
 InetSocketAddress sockAddr = new InetSocketAddress(targetAddr, targetPort);
@@ -9,9 +10,10 @@ Socket s = new Socket();
 long startTime = System.nanoTime();
 long duration;
 s.connect(sockAddr);
-duration = (System.nan"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/resume.html" target="_self" class="nav-list-link">简历</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">rss</a></li><li class="nav-list-item"><a href="https://github.com/dolonfly" target="_blank" class="nav-list-link">github</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">小序Cloudcmp的network(网络任务)</h1><div class="post-meta"><div class="post-time">May 13, 2013</div></div><div class="post-content"><p>Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    </p>
+dura"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/resume.html" target="_self" class="nav-list-link">简历</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">rss</a></li><li class="nav-list-item"><a href="https://github.com/dolonfly" target="_blank" class="nav-list-link">github</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">小序Cloudcmp的network(网络任务)</h1><div class="post-meta"><div class="post-time">May 13, 2013</div></div><div class="post-content"><p>Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    </p>
 <p>对于网络性能，主要是通过tcp吞吐量和延迟来衡量的，因此本部分也是通过测量这两方面的性能来评测不同云平台的网络性能的。</p>
 <p>以下分别对带宽和延迟来分别说明</p>
+<a id="more"></a>
 <h2 id="u5EF6_u8FDF"><a href="#u5EF6_u8FDF" class="headerlink" title="延迟"></a>延迟</h2><p>对于所有的任务来说，每个实现类均集成了基类Task，并实现重写了一些一些方法，而对于重写的方法来说，run()方法是最核心的一个方法。我们这里并不对他类是怎么写的来说明，仅仅说明其是如何实现的这一对延迟进行测量的方法。</p>
 <p>核心代码如下：</p>
 <pre><code>InetSocketAddress sockAddr = new InetSocketAddress(targetAddr, targetPort);

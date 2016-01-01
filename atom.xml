@@ -4,7 +4,7 @@
   <subtitle><![CDATA[杜龙龙的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dullong.com/"/>
-  <updated>2015-12-31T14:56:50.000Z</updated>
+  <updated>2016-01-01T15:20:48.000Z</updated>
   <id>http://www.dullong.com/</id>
   
   <author>
@@ -19,9 +19,10 @@
     <link href="http://www.dullong.com/Git-Cheat-Sheet-Chinese.html"/>
     <id>http://www.dullong.com/Git-Cheat-Sheet-Chinese.html</id>
     <published>2015-11-22T04:59:33.000Z</published>
-    <updated>2015-12-31T14:56:50.000Z</updated>
+    <updated>2016-01-01T15:20:48.000Z</updated>
     <content type="html"><![CDATA[<h3 id="u521B_u5EFA"><a href="#u521B_u5EFA" class="headerlink" title="创建"></a>创建</h3><p>复制一个已创建的仓库:<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">ssh</span>://user@domain.com/repo.git</span><br></pre></td></tr></table></figure></p>
 <p>创建一个新的本地仓库:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git init</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <hr>
 <h3 id="u672C_u5730_u4FEE_u6539"><a href="#u672C_u5730_u4FEE_u6539" class="headerlink" title="本地修改"></a>本地修改</h3><p>显示工作路径下已修改的文件：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git status</span><br></pre></td></tr></table></figure></p>
 <p>显示与上次提交版本文件的不同：<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git diff</span><br></pre></td></tr></table></figure></p>
@@ -78,7 +79,9 @@
 <p>来源： <a href="https://raw.githubusercontent.com/flyhigher139/Git-Cheat-Sheet/master/Git%20Cheat%20Sheet-Zh.md" target="_blank" rel="external">https://raw.githubusercontent.com/flyhigher139/Git-Cheat-Sheet/master/Git%20Cheat%20Sheet-Zh.md</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h3 id="u521B_u5EFA"><a href="#u521B_u5EFA" class="headerlink" title="创建"></a>创建</h3><p>复制一个已创建的仓库:<br><figure class="highlight crmsh"><tabl]]>
+    <![CDATA[<h3 id="u521B_u5EFA"><a href="#u521B_u5EFA" class="headerlink" title="创建"></a>创建</h3><p>复制一个已创建的仓库:<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">clone</span> <span class="title">ssh</span>://user@domain.com/repo.git</span><br></pre></td></tr></table></figure></p>
+<p>创建一个新的本地仓库:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git init</span><br></pre></td></tr></table></figure></p>]]>
+    
     </summary>
     
   </entry>
@@ -184,10 +187,11 @@
     <link href="http://www.dullong.com/introduces-cloudcmp-network.html"/>
     <id>http://www.dullong.com/introduces-cloudcmp-network.html</id>
     <published>2013-05-13T01:14:42.000Z</published>
-    <updated>2015-12-31T18:17:30.000Z</updated>
+    <updated>2016-01-01T15:20:20.000Z</updated>
     <content type="html"><![CDATA[<p>Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    </p>
 <p>对于网络性能，主要是通过tcp吞吐量和延迟来衡量的，因此本部分也是通过测量这两方面的性能来评测不同云平台的网络性能的。</p>
 <p>以下分别对带宽和延迟来分别说明</p>
+<a id="more"></a>
 <h2 id="u5EF6_u8FDF"><a href="#u5EF6_u8FDF" class="headerlink" title="延迟"></a>延迟</h2><p>对于所有的任务来说，每个实现类均集成了基类Task，并实现重写了一些一些方法，而对于重写的方法来说，run()方法是最核心的一个方法。我们这里并不对他类是怎么写的来说明，仅仅说明其是如何实现的这一对延迟进行测量的方法。</p>
 <p>核心代码如下：</p>
 <pre><code>InetSocketAddress sockAddr = new InetSocketAddress(targetAddr, targetPort);
@@ -252,7 +256,8 @@ s.close();
     <summary type="html">
     <![CDATA[<p>Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    </p>
 <p>对于网络性能，主要是通过tcp吞吐量和延迟来衡量的，因此本部分也是通过测量这两方面的性能来评测不同云平台的网络性能的。</p>
-<]]>
+<p>以下分别对带宽和延迟来分别说明</p>]]>
+    
     </summary>
     
   </entry>
