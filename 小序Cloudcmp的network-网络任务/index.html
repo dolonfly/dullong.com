@@ -1,0 +1,75 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 小序Cloudcmp的network(网络任务) · 菜鸟小院</title><meta name="description" content="Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    
+对于网络性能，主要是通过tcp吞吐量和延迟来衡量的，因此本部分也是通过测量这两方面的性能来评测不同云平台的网络性能的。
+以下分别对带宽和延迟来分别说明
+延迟对于所有的任务来说，每个实现类均集成了基类Task，并实现重写了一些一些方法，而对于重写的方法来说，run()方法是最核心的一个方法。我们这里并不对他类是怎么写的来说明，仅仅说明其是如何实现的这一对延迟进行测量的方法。
+核心代码如下：
+InetSocketAddress sockAddr = new InetSocketAddress(targetAddr, targetPort);
+// try connect
+Socket s = new Socket();
+long startTime = System.nanoTime();
+long duration;
+s.connect(sockAddr);
+duration = (System.nan"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="/resume" target="_self" class="nav-list-link">简历</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">rss</a></li><li class="nav-list-item"><a href="https://github.com/dolonfly" target="_blank" class="nav-list-link">github</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">小序Cloudcmp的network(网络任务)</h1><div class="post-meta"><div class="post-time">May 13, 2013</div></div><div class="post-content"><p>Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    </p>
+<p>对于网络性能，主要是通过tcp吞吐量和延迟来衡量的，因此本部分也是通过测量这两方面的性能来评测不同云平台的网络性能的。</p>
+<p>以下分别对带宽和延迟来分别说明</p>
+<h2 id="u5EF6_u8FDF"><a href="#u5EF6_u8FDF" class="headerlink" title="延迟"></a>延迟</h2><p>对于所有的任务来说，每个实现类均集成了基类Task，并实现重写了一些一些方法，而对于重写的方法来说，run()方法是最核心的一个方法。我们这里并不对他类是怎么写的来说明，仅仅说明其是如何实现的这一对延迟进行测量的方法。</p>
+<p>核心代码如下：</p>
+<pre><code>InetSocketAddress sockAddr = new InetSocketAddress(targetAddr, targetPort);
+// try connect
+Socket s = new Socket();
+long startTime = System.nanoTime();
+long duration;
+s.connect(sockAddr);
+duration = (System.nanoTime() - startTime) / 1000; // in microseconds
+s.close();
+</code></pre><p>其中，targetAddr和targetPort分别为地址的ip和端口号，而这一段的主要作用就是建立一个socket连接，并且连接成功所需要的时间，通过这个时间，并可以大概的计算出性能如何。通过多次进行这个方法并且求其平均值，便可以计算出某个云平台的网络延迟如何。</p>
+<h2 id="u5E26_u5BBD"><a href="#u5E26_u5BBD" class="headerlink" title="带宽"></a>带宽</h2><p>核心代码如下：</p>
+<pre><code>public long measureBandwidth(String targetAddr, long transferSize) throws IOException {
+    int targetPort;
+    if (!configs.containsKey(&quot;bw_port&quot;)) {
+        return -1;
+    }
+
+    targetPort = Integer.parseInt(configs.get(&quot;bw_port&quot;));        
+
+    InetSocketAddress sockAddr = new InetSocketAddress(targetAddr, targetPort);
+
+    Socket s = new Socket();
+    s.setTcpNoDelay(true);
+    s.setSendBufferSize(8000000); // 8MB send buffer, enough for wide-area transfer
+    byte [] buffer = new byte[8000000];
+    long startTime;
+    long duration;
+    try {
+        s.connect(sockAddr);
+        long transferred = 0;
+        InputStream is = s.getInputStream();
+        OutputStream os = s.getOutputStream();
+
+        byte [] transferSizeBytes = ByteBuffer.allocate(8).putLong(transferSize).array();            
+        os.write(transferSizeBytes); // first tell the destination how many bytes we are going to send
+        os.flush();
+
+        startTime = System.nanoTime();
+        while (transferred &lt; transferSize) {
+            os.write(buffer);
+            transferred += buffer.length;
+        }
+        os.flush();
+        is.read(); // waiting for all bytes to be received by the destination
+        duration = System.nanoTime() - startTime;
+        s.close();
+    }
+    catch (IOException ex) {
+        throw ex;
+    }
+    catch (Exception ex) {
+        ex.printStackTrace();
+        return -1;
+    }
+
+    return (long)(transferSize * 8 / ((double)duration / 1000000000));
+}
+</code></pre><p>关于带宽的计算上面，用到了与计算延迟相同的方法，只是对于延迟，不需要传输数据，而带宽则是通过多次进行传输一固定数据 transferSize ，获取操作时间来计算带宽的。关于带宽的计算公式为：带宽=传输大小*8/时间</p>
+<p>由上看来，关于Cloudcmp的网络性能方面，其做的并不是太复杂，由此可见，一个大的工程并不是都是复杂的东西堆砌出来的，对于复杂的问题，都是一个一个简单的问题组成的，当简单的问题解决了，复杂的也就自然而然的解决了。</p>
+</div></article></div></section><footer><div class="paginator"><a href="/在Google-Appengine上部署应用的几种方式/" class="prev">上一篇</a><a class="prev"> </a></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>

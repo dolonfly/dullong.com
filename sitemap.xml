@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.dullong.com/resume/</loc>
-    <lastmod>2015-12-31T15:49:13.000Z</lastmod>
+    <loc>http://www.dullong.com/resume.html</loc>
+    <lastmod>2016-01-01T03:35:31.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.dullong.com/install-dd-wrt-and-astrill-into-netgear-r6300/</loc>
+    <lastmod>2015-12-31T18:23:30.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.dullong.com/%E5%B0%8F%E5%BA%8FCloudcmp%E7%9A%84network-%E7%BD%91%E7%BB%9C%E4%BB%BB%E5%8A%A1/</loc>
+    <lastmod>2015-12-31T18:17:30.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.dullong.com/%E5%9C%A8Google-Appengine%E4%B8%8A%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</loc>
+    <lastmod>2015-12-31T18:13:02.000Z</lastmod>
   </url>
   
   <url>

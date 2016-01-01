@@ -4,7 +4,7 @@
   <subtitle><![CDATA[杜龙龙的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.dullong.com/"/>
-  <updated>2015-12-31T15:49:13.000Z</updated>
+  <updated>2015-12-31T14:56:50.000Z</updated>
   <id>http://www.dullong.com/</id>
   
   <author>
@@ -13,250 +13,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[简历]]></title>
-    <link href="http://www.dullong.com/resume/"/>
-    <id>http://www.dullong.com/resume/</id>
-    <published>2015-12-28T14:00:33.000Z</published>
-    <updated>2015-12-31T15:49:13.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="u8054_u7CFB_u65B9_u5F0F"><a href="#u8054_u7CFB_u65B9_u5F0F" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
-<li><p>手机：185-2156-5321</p>
-</li>
-<li><p>Email：kaixin890312@163.com</p>
-</li>
-<li><p>住址：上海嘉定</p>
-</li>
-</ul>
-<hr>
-<h1 id="u4E2A_u4EBA_u4FE1_u606F"><a href="#u4E2A_u4EBA_u4FE1_u606F" class="headerlink" title="个人信息"></a>个人信息</h1><ul>
-<li><p>杜龙龙/男/1989 </p>
-</li>
-<li><p>本科/中原工学院计算机科学系 </p>
-</li>
-<li><p>期望职位：java / 全栈</p>
-</li>
-<li><p>期望薪资：20k</p>
-</li>
-<li><p>期望城市：上海</p>
-</li>
-</ul>
-<hr>
-<h1 id="u4E2A_u4EBA_u603B_u7ED3"><a href="#u4E2A_u4EBA_u603B_u7ED3" class="headerlink" title="个人总结"></a>个人总结</h1><p>技术宅、爱钻研、好奇心、爱学习、接收新技术快、认为语言只是工具，思想最重要</p>
-<h1 id="u5DE5_u4F5C_u7ECF_u5386"><a href="#u5DE5_u4F5C_u7ECF_u5386" class="headerlink" title="工作经历"></a>工作经历</h1><h2 id="u4E0A_u6D77_u5494_u5693_u5144_u5F1F_u79D1_u6280_u6709_u9650_u516C_u53F8_uFF082015_u5E744_u6708__7E_2015_u5E7412_u6708_uFF09"><a href="#u4E0A_u6D77_u5494_u5693_u5144_u5F1F_u79D1_u6280_u6709_u9650_u516C_u53F8_uFF082015_u5E744_u6708__7E_2015_u5E7412_u6708_uFF09" class="headerlink" title="上海咔嚓兄弟科技有限公司（2015年4月 ~ 2015年12月）"></a>上海咔嚓兄弟科技有限公司（2015年4月 ~ 2015年12月）</h2><p>本人在任职期间，主要进行如下相关工作</p>
-<ul>
-<li><p>爬虫硬件网络搭建</p>
-</li>
-<li><p>爬虫系统编码维护工作</p>
-</li>
-<li><p>图像检索标注分类管理系统（SOT）</p>
-</li>
-<li><p>商城推荐系统（kc-mall）的部分编码工作</p>
-</li>
-<li><p>业余时间内部图书管理系统服务端(node)及移动端(iOS)的开发</p>
-</li>
-</ul>
-<p>主要贡献</p>
-<ul>
-<li><p>成功抓取千万级电商数据，极大丰富了产品库，并为图像训练搜索打下坚实基础</p>
-</li>
-<li><p>SOT提供的基础标注数据对图像训练精度有很大提升</p>
-</li>
-<li><p>kc-mall中为运营人员提供后台编辑功能，减少了发布难度及工作量；OSS插件减少上传复杂度及图片维护复杂度；并提供两个模块的api供移动端调用。</p>
-</li>
-<li><p>图书管理系统减少了行政管理书籍的难度，为员工查书及买书提供方便</p>
-</li>
-</ul>
-<h3 id="u7F51_u7EDC_u722C_u866B_u7CFB_u7EDF_uFF08crawler-slave_uFF09"><a href="#u7F51_u7EDC_u722C_u866B_u7CFB_u7EDF_uFF08crawler-slave_uFF09" class="headerlink" title="网络爬虫系统（crawler-slave）"></a>网络爬虫系统（crawler-slave）</h3><p>本系统作为爬虫系统的一部分，受<code>master</code>端进行调度。主要接收<code>master</code>分配的任务并抓取解析相关电商网站图片及文字等资源。本人负责本项目的所有编码设计工作。</p>
-<p>服务架构：java + webmagic + httpclient + jsoup + maven + mysql</p>
-<p>架构组成：</p>
-<ul>
-<li><p>dao：抽象并封装与数据库间的交互</p>
-</li>
-<li><p>domain：一些简单的类(pojo)</p>
-</li>
-<li><p>downloader：下载模块，负责请求uri并进行下载给<code>processor</code>解析</p>
-</li>
-<li><p>pageProcessor：解析处理<code>downloader</code>模块下载的文本及图片资源</p>
-</li>
-<li><p>pipeline：负责持久化<code>processor</code>解析后的结构化数据及图片资源</p>
-</li>
-<li><p>scheduler：队列，给<code>downloader</code>提供url</p>
-</li>
-<li><p>utils：其他一些公共工具类</p>
-</li>
-</ul>
-<h3 id="u56FE_u50CF_u68C0_u7D22_u6807_u6CE8_u5206_u7C7B_u7BA1_u7406_u7CFB_u7EDF_uFF08SOT_uFF09"><a href="#u56FE_u50CF_u68C0_u7D22_u6807_u6CE8_u5206_u7C7B_u7BA1_u7406_u7CFB_u7EDF_uFF08SOT_uFF09" class="headerlink" title="图像检索标注分类管理系统（SOT）"></a>图像检索标注分类管理系统（SOT）</h3><p>本系统主要维护各种第三方网站分类及自有分类，为其他系统提供基础数据。本人编码并维护除了用户管理外的其他功能，并编写对应的测试代码。</p>
-<p>服务架构：node.js + express + ejs + mocha +mongo</p>
-<p>基本功能：</p>
-<ul>
-<li><p>用户管理：创建用户、登陆功能</p>
-</li>
-<li><p>类别关系管理：查看并修改多种类别对应关系</p>
-</li>
-<li><p>各电商分类管理：管理编辑各大电商分类数据</p>
-</li>
-<li><p>自有类别管理：创建修改自有类别</p>
-</li>
-<li><p>日志管理：记录上面各功能操作日志，方便追踪回滚</p>
-</li>
-</ul>
-<h3 id="u5546_u57CE_u63A8_u8350_u7CFB_u7EDF_uFF08kc-mall_uFF09"><a href="#u5546_u57CE_u63A8_u8350_u7CFB_u7EDF_uFF08kc-mall_uFF09" class="headerlink" title="商城推荐系统（kc-mall）"></a>商城推荐系统（kc-mall）</h3><p>本系统作为一个内部的系统，主要供运营人员进行编辑并给移动端提供api服务。主要基于node.js、bootstrap、markdown，本人主要编码并维护上传控件、条幅及精品推荐相关代码及测试。</p>
-<p>服务架构：node.js + express + jade + mocha +mongo</p>
-<p>基本功能：</p>
-<ul>
-<li><p>消息管理：提供页面供用户编辑推送消息，并提供相关api给移动端</p>
-</li>
-<li><p>文章管理：提供文章创建(markdown)、编辑及预览功能，集成图片上传控件(jquery插件方式、上传至oss)</p>
-</li>
-<li><p>资源管理：图片资源管理，提供上传文件并插入文章等相应位置</p>
-</li>
-<li><p>条幅管理：条幅创建、修改、激活等相关操作，并提供相关api</p>
-</li>
-<li><p>精品推荐：精品推荐资源的创建、修改及激活操作，并提供相关api</p>
-</li>
-</ul>
-<h2 id="u521B_u65B0_u5DE5_u573A__B7__u5B66_u9738_u541B_uFF08_u4E0A_u6D77_u95EE_u5427_u79D1_u6280_uFF09_uFF08_2014_u5E746_u6708__7E_2015_u5E743_u6708_uFF09"><a href="#u521B_u65B0_u5DE5_u573A__B7__u5B66_u9738_u541B_uFF08_u4E0A_u6D77_u95EE_u5427_u79D1_u6280_uFF09_uFF08_2014_u5E746_u6708__7E_2015_u5E743_u6708_uFF09" class="headerlink" title="创新工场 · 学霸君（上海问吧科技）（ 2014年6月 ~ 2015年3月）"></a>创新工场 · 学霸君（上海问吧科技）（ 2014年6月 ~ 2015年3月）</h2><p>本人在任职期间，主要进行如下相关工作</p>
-<ul>
-<li><p>采集互联网公开/半公开的试题资源</p>
-</li>
-<li><p>采集并下载百度文库中所有教育相关文档</p>
-</li>
-<li><p>解析文档(word、pdf)中试题为结构化数据</p>
-</li>
-</ul>
-<p>主要贡献</p>
-<ul>
-<li><p>成功抓取近千万结构化题目信息</p>
-</li>
-<li><p>提取文档中题目、解析、答案等信息，有效正确率达到95%</p>
-</li>
-</ul>
-<h3 id="u4E92_u8054_u7F51_u8BD5_u9898_u91C7_u96C6_u7CFB_u7EDF"><a href="#u4E92_u8054_u7F51_u8BD5_u9898_u91C7_u96C6_u7CFB_u7EDF" class="headerlink" title="互联网试题采集系统"></a>互联网试题采集系统</h3><p>在本项目中，我主要的任务是搜集互联网上的试题信息，并进行采集入库操作。作为数据采集的核心成员，不仅按时的完成了指定工作，还利用空闲时间完成了采集框架的集成开发，大大提高了数据抓取的速度及质量。</p>
-<p>主要功能</p>
-<ul>
-<li><p>采集各教育、题库网站试题数据</p>
-</li>
-<li><p>解析成指定结构化数据</p>
-</li>
-<li><p>增量抓取解析功能</p>
-</li>
-</ul>
-<h3 id="word/pdf__u7535_u5B50_u6587_u6863_u91C7_u96C6_u89E3_u6790_u7CFB_u7EDF"><a href="#word/pdf__u7535_u5B50_u6587_u6863_u91C7_u96C6_u89E3_u6790_u7CFB_u7EDF" class="headerlink" title="word/pdf 电子文档采集解析系统"></a>word/pdf 电子文档采集解析系统</h3><p>在各家数据处于统一化之时，我承担起了解析电子文档的工作。利用以前积累的文档解析、dom解析等技能，通过一系列算法，将各种电子文档中的有效信息进行筛选提取，生成结构化数据，丰富了公司题库。</p>
-<p>主要功能</p>
-<ul>
-<li><p>采集并下载百度文库等网站文档</p>
-</li>
-<li><p>解析文档成结构化试题信息</p>
-</li>
-</ul>
-<h3 id="u6587_u6863_u6587_u732E_u7BA1_u7406_u7CFB_u7EDF"><a href="#u6587_u6863_u6587_u732E_u7BA1_u7406_u7CFB_u7EDF" class="headerlink" title="文档文献管理系统"></a>文档文献管理系统</h3><p>本项目主要利用B/S+C/S架构，将对放的所有电子档案利用lucene等搜索技术进行索引并进行全文检索，提供web端及桌面端。本系统主要使用到了Lucene、itext、jquery等技术。</p>
-<p>做为项目的负责人，在项目中的主要职责为：系统的整体设计，pdf文档内容抽取，索引建立、全文检索及相关api接口的设计及实现。</p>
-<p>主要功能</p>
-<ul>
-<li><p>提取多种格式文档中内容</p>
-</li>
-<li><p>文档索引建立及检索</p>
-</li>
-<li><p>web端及桌面端(c#)</p>
-</li>
-</ul>
-<h2 id="u5317_u4EAC_u8D85_u661F_u90D1_u5DDE_u7814_u7A76_u6240__uFF08_2013_u5E747_u6708__7E_2014_u5E745_u6708__uFF09"><a href="#u5317_u4EAC_u8D85_u661F_u90D1_u5DDE_u7814_u7A76_u6240__uFF08_2013_u5E747_u6708__7E_2014_u5E745_u6708__uFF09" class="headerlink" title="北京超星郑州研究所 （ 2013年7月 ~ 2014年5月 ）"></a>北京超星郑州研究所 （ 2013年7月 ~ 2014年5月 ）</h2><p>本人在任职期间，主要进行如下相关工作</p>
-<ul>
-<li><p>管理团队(技术)</p>
-</li>
-<li><p>采集并下载互联网公开百科、文档数据</p>
-</li>
-<li><p>负责文档管理系统并实现接口部分</p>
-</li>
-</ul>
-<p>主要贡献</p>
-<ul>
-<li><p>团队出色提前完成任务</p>
-</li>
-<li><p>获取上亿条百科、文档数据，为总部提供充足数据</p>
-</li>
-<li><p>简化了日报周报记录统计方式</p>
-</li>
-<li><p>集成Lucene并提供api给客户端调用</p>
-</li>
-</ul>
-<h3 id="u767E_u79D1_u6587_u6863_u6293_u53D6_u7CFB_u7EDF"><a href="#u767E_u79D1_u6587_u6863_u6293_u53D6_u7CFB_u7EDF" class="headerlink" title="百科文档抓取系统"></a>百科文档抓取系统</h3><p>利用爬虫技术，抓取互联网上有效信息，丰富自己的资源库。做为项目的负责人，从刚开始的一个人到后来的十几个人，从个人技术到团队管理有了长足的进步。</p>
-<h3 id="u5468_u62A5_u65E5_u5FD7_u7BA1_u7406_u7CFB_u7EDF"><a href="#u5468_u62A5_u65E5_u5FD7_u7BA1_u7406_u7CFB_u7EDF" class="headerlink" title="周报日志管理系统"></a>周报日志管理系统</h3><p>为了及时有效的分析团队日志及周报信息，利用ssh技术做了一个简单的记录各人日志周报信息的应用。方便了项目负责人对各成员的了解及整体进度把控。</p>
-<p>主要功能</p>
-<ul>
-<li><p>注册、登陆</p>
-</li>
-<li><p>编写、修改个人日报周报日志</p>
-</li>
-<li><p>负责人查看、统计周报</p>
-</li>
-</ul>
-<h2 id="u6CB3_u5357_u5C71_u8C37_u7F51_u7EDC_u516C_u53F8_uFF08_2011_u5E746_u6708__7E_2012_u5E7410_u6708__uFF09"><a href="#u6CB3_u5357_u5C71_u8C37_u7F51_u7EDC_u516C_u53F8_uFF08_2011_u5E746_u6708__7E_2012_u5E7410_u6708__uFF09" class="headerlink" title="河南山谷网络公司（ 2011年6月 ~ 2012年10月 ）"></a>河南山谷网络公司（ 2011年6月 ~ 2012年10月 ）</h2><p>本人在任职期间，主要进行如下相关工作</p>
-<ul>
-<li><p>搜集新闻资源，并进行简单语义分析</p>
-</li>
-<li><p>采集框架编写</p>
-</li>
-</ul>
-<p>主要贡献</p>
-<ul>
-<li><p>采集百万级新闻素材供分析使用</p>
-</li>
-<li><p>提供舆情信息的初步预警，为后期深层次分析提供素材</p>
-</li>
-</ul>
-<h3 id="u8206_u60C5_u5206_u6790"><a href="#u8206_u60C5_u5206_u6790" class="headerlink" title="舆情分析"></a>舆情分析</h3><p>本系统主要是搜集互联网上的各种公开资源，并对其进行抓取及语义分析，对敏感信息进行预警操作。</p>
-<p>在本系统中，我的职责主要为：采集主框架编写及几个网站插件的编写；关键词初步预警处理。</p>
-<hr>
-<h1 id="u5F00_u6E90_u9879_u76EE_u548C_u4F5C_u54C1"><a href="#u5F00_u6E90_u9879_u76EE_u548C_u4F5C_u54C1" class="headerlink" title="开源项目和作品"></a>开源项目和作品</h1><ul>
-<li><a href="https://github.com/dolonfly/book-store" target="_blank" rel="external">book-store</a> : 一个通过api查询图书信息的简单系统，node.js开发</li>
-</ul>
-<ul>
-<li><a href="https://github.com/dolonfly/book-library" target="_blank" rel="external">book-library</a>  : 图书管理系统服务端，提供相关api，node.js开发</li>
-</ul>
-<ul>
-<li><a href="https://github.com/dolonfly/book-library-ios" target="_blank" rel="external">book-library-ios</a>  : 图书管理系统iOS端</li>
-</ul>
-<ul>
-<li><a href="http://git.oschina.net/dll/FireDocManager" target="_blank" rel="external">FireDocManager</a>   : 一个基于Lucene的电子档案文档全文检索系统，在优化传统的档案管理上基础上增加了全文检索功能。</li>
-</ul>
-<ul>
-<li><a href="https://coding.net/u/idea/p/simple-blog/git" target="_blank" rel="external">simple-blog</a>   :  simple-blog是一个基于springmvc开发的博客系统</li>
-</ul>
-<h1 id="u6280_u80FD_u6E05_u5355"><a href="#u6280_u80FD_u6E05_u5355" class="headerlink" title="技能清单"></a>技能清单</h1><p>以下均为我熟练使用的技能</p>
-<ul>
-<li><p>精通：Java，网络爬虫</p>
-</li>
-<li><p>掌握语言：C，C＃，JavaScript，，iOS，HTML，CSS，MySQL，MarkDown</p>
-</li>
-<li><p>Web开发：java web/Spring mvc/ssh/node.js</p>
-</li>
-<li><p>前端框架：Bootstrap</p>
-</li>
-<li><p>开源框架：httpclient/commons-lang3/jsoup/json/Lucene/DbUtils/lodash/async</p>
-</li>
-<li><p>数据库相关：MySQL/SQLite</p>
-</li>
-<li><p>服务器：tomcat/nginx</p>
-</li>
-<li><p>版本管理、文档和自动化部署工具：Svn/Git/maven</p>
-</li>
-<li><p>单元测试：junit/mocha</p>
-</li>
-<li><p>云和开放平台：BAE/ACE/地图应用开发/微信应用开发/oss</p>
-</li>
-</ul>
-<hr>
-<h1 id="u81F4_u8C22"><a href="#u81F4_u8C22" class="headerlink" title="致谢"></a>致谢</h1><p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
-<p>如果本人不符合贵公司要求，请指出不符合的地方，谢谢。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="u8054_u7CFB_u65B9_u5F0F"><a href="#u8054_u7CFB_u65B9_u5F0F" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
-<li><p>手机：185-2156-532]]>
-    </summary>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[Git 常用命令]]></title>
@@ -323,6 +79,180 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="u521B_u5EFA"><a href="#u521B_u5EFA" class="headerlink" title="创建"></a>创建</h3><p>复制一个已创建的仓库:<br><figure class="highlight crmsh"><tabl]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[install dd-wrt and astrill into netgear r6300]]></title>
+    <link href="http://www.dullong.com/install-dd-wrt-and-astrill-into-netgear-r6300/"/>
+    <id>http://www.dullong.com/install-dd-wrt-and-astrill-into-netgear-r6300/</id>
+    <published>2015-08-23T14:54:30.000Z</published>
+    <updated>2015-12-31T18:23:30.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Step_1-_install_DD-WRT"><a href="#Step_1-_install_DD-WRT" class="headerlink" title="Step 1. install DD-WRT"></a>Step 1. install DD-WRT</h2><p>The whole detail can refer to <a href="http://www.dd-wrt.com/wiki/index.php/Netgear_R6300v2" target="_blank" rel="external">Netgear_R6300v2</a></p>
+<h2 id="Step_2-_open_ssh_for_DD-WRT_and_set_no_crossdetect_is_true"><a href="#Step_2-_open_ssh_for_DD-WRT_and_set_no_crossdetect_is_true" class="headerlink" title="Step 2. open ssh for DD-WRT and set no_crossdetect is true"></a>Step 2. open ssh for DD-WRT and set no_crossdetect is true</h2><ol>
+<li><p>connect to your router and set sshd enabled.</p>
+</li>
+<li><p>go to telnet/ssh console and type <code>nvram set no_crossdetect=1 nvram commit</code></p>
+</li>
+</ol>
+<p>refer:<a href="http://svn.dd-wrt.com/ticket/1483" target="_blank" rel="external">Would like ability to turn off “Cross Site Action detected” error</a>  </p>
+<p>note: the feature is introduced in <a href="http://svn.dd-wrt.com/changeset/14962" target="_blank" rel="external">r14962</a>. to prevent bad configs , i will not implement it as gui configurable feature.</p>
+<h2 id="Step_3-_install_astrill_vpn"><a href="#Step_3-_install_astrill_vpn" class="headerlink" title="Step 3. install astrill vpn"></a>Step 3. install astrill vpn</h2><ol>
+<li><p>login your astrill account,if you have no astrill account ,you need reg one first.</p>
+</li>
+<li><p>go <a href="https://members.astrill.com/router-setup.php" target="_blank" rel="external">router setup</a> and select your firmware as DD-WRT and edit your router ip.</p>
+</li>
+<li><p>click install button,and the astrill code will install to your dd-wrt router system.</p>
+</li>
+</ol>
+<h2 id="Step_4-_configure_astrill"><a href="#Step_4-_configure_astrill" class="headerlink" title="Step 4. configure astrill"></a>Step 4. configure astrill</h2><ol>
+<li><p>login to your router</p>
+</li>
+<li><p>select the <code>status</code> tab and then click <code>MyPage</code> tab,and it will in astrill configure page</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Step_1-_install_DD-WRT"><a href="#Step_1-_install_DD-WRT" class="headerlink" title="Step 1. install DD-WRT"></a>Step 1. install DD-W]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[在Google Appengine上部署应用的几种方式]]></title>
+    <link href="http://www.dullong.com/%E5%9C%A8Google-Appengine%E4%B8%8A%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"/>
+    <id>http://www.dullong.com/在Google-Appengine上部署应用的几种方式/</id>
+    <published>2013-09-03T17:55:42.000Z</published>
+    <updated>2015-12-31T18:13:02.000Z</updated>
+    <content type="html"><![CDATA[<p>对于想使用云平台活着体验一下云平台的用户来说， google的appengine是一个不错的选择。 它提供了强大的功能和几乎免费的实例。对于学习来说绰绰有余。下面来简单介绍一下将自己的应用部署到appengine上的几种方法。</p>
+<p>总体来说，有两种方法：直接通过google提供的上传脚本和通过eclipse的插件两种方法来上传。</p>
+<a id="more"></a>
+<h2 id="u51C6_u5907_u5DE5_u4F5C"><a href="#u51C6_u5907_u5DE5_u4F5C" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>下载和安装java环境，下载Tomcat 6，可baidu或Google，不再赘述</p>
+</li>
+<li><p>下载 appengine sdk，我的版本为 appengine-java-sdk-1.7.4，作用提供模拟云环境及上传等功能。</p>
+</li>
+<li><p>文本编辑器，如 notepad++ 等。</p>
+</li>
+<li><p>一个已经编写成功的web应用（符合appengine规范）</p>
+</li>
+</ul>
+<h3 id="u901A_u8FC7google_SDK_u4E2D_u7684_u63D2_u4EF6_u8FDB_u884C_u4E0A_u4F20"><a href="#u901A_u8FC7google_SDK_u4E2D_u7684_u63D2_u4EF6_u8FDB_u884C_u4E0A_u4F20" class="headerlink" title="通过google SDK中的插件进行上传"></a>通过google SDK中的插件进行上传</h3><p>将appengine-java-sdk-1.7.4解压，并将其bin目录加入环境变量,定位到应用文件夹,执行命令 （其中WebContent为项目目录）<code>appcfg.cmd update WebContent</code>即可将WebContent作为项目文件夹上传上去。</p>
+<h3 id="u4F7F_u7528eclipse_u63D2_u4EF6_u8FDB_u884C_u4E0A_u4F20"><a href="#u4F7F_u7528eclipse_u63D2_u4EF6_u8FDB_u884C_u4E0A_u4F20" class="headerlink" title="使用eclipse插件进行上传"></a>使用eclipse插件进行上传</h3><p>如果使用Eclipse，最简便的 App Engine 应用程序开发、测试和上传方法是使用Eclipse 插件。该插件包含完全在 Eclipse 中构建、测试和部署应用程序所需的所有功能。</p>
+<p>该插件适用于 Eclipse 3.3、3.4 和 3.5 版。您可以使用 Eclipse 的“软件更新”功能安装该插件。安装位置如下所示：</p>
+<ul>
+<li>用于 Eclipse 3.3 (Europa) 的 Eclipse Google 插件：<a href="http://dl.google.com/eclipse/plugin/3.3" target="_blank" rel="external">http://dl.google.com/eclipse/plugin/3.3</a></li>
+<li>用于 Eclipse 3.4 (Ganymede) 的 Eclipse Google 插件：<a href="http://dl.google.com/eclipse/plugin/3.4" target="_blank" rel="external">http://dl.google.com/eclipse/plugin/3.4</a></li>
+<li>用于 Eclipse 3.5 (Galileo) 的 Eclipse Google 插件：<a href="http://dl.google.com/eclipse/plugin/3.5" target="_blank" rel="external">http://dl.google.com/eclipse/plugin/3.5</a></li>
+</ul>
+<p>具体安装步骤同其他常用插件一样，如若不懂请自行google之</p>
+<h4 id="u521B_u5EFA_u4E00_u4E2AGoogle_Appengine_u9879_u76EE"><a href="#u521B_u5EFA_u4E00_u4E2AGoogle_Appengine_u9879_u76EE" class="headerlink" title="创建一个Google Appengine项目"></a>创建一个Google Appengine项目</h4><ul>
+<li><p>选择文件菜单 &gt; 新建 &gt; 网络应用程序项目（如果没有看到该菜单选项，请选择窗口菜单 &gt; 重置视角…，点击确定，然后再次尝试选择文件菜单）。或者，点击工具栏中的“新建网络应用程序项目”按钮：“新建网络应用程序项目”按钮。</p>
+</li>
+<li><p>将打开“创建网络应用程序项目”向导。在“项目名称”中输入项目的名称，</p>
+</li>
+<li><p>如果使用软件更新功能安装 App Engine SDK，则已将插件配置为使用安装的 SDK。如果要使用单独的 App Engine SDK 安装，请点击配置 SDK…，然后按照提示在 SDK 的 appengine-java-sdk/ 目录中添加配置。</p>
+</li>
+<li><p>点击完成以创建项目。</p>
+</li>
+<li><p>编写项目代码（同普通java ee代码一样。只是做了一些限制，比如不能创建新等等对安全有隐患的操作之类）</p>
+</li>
+</ul>
+<h4 id="u5C06_u9879_u76EE_u4E0A_u4F20_u5230google_Appengine_u4E0A"><a href="#u5C06_u9879_u76EE_u4E0A_u4F20_u5230google_Appengine_u4E0A" class="headerlink" title="将项目上传到google Appengine上"></a>将项目上传到google Appengine上</h4><ul>
+<li><p>Google Eclipse 插件在 Eclipse 工具栏中添加了几个按钮。App Engine 部署按钮用于将应用程序上传到 App Engine：App Engine 部署按钮。</p>
+</li>
+<li><p>第一次上传应用程序之前，必须使用控制台在 App Engine 中注册应用程序 ID。注册一个应用程序 ID，然后编辑 appengine-web.xml 文件并更改 <application>…</application> 元素以包含新 ID。</p>
+</li>
+<li><p>在点击 App Engine 部署按钮时，Eclipse 将提示您输入管理员帐户用户名（您的电子邮件地址）和密码。输入您的帐户信息，然后点击上传按钮以完成上传。Eclipse 将从appengine-web.xml 文件中获取应用程序 ID 和版本信息，然后上传 war/ 目录内容。</p>
+</li>
+<li><p>通过访问应用程序网址，在 App Engine 上测试应用程序：<code>http://应用ID.appspot.com/项目名</code></p>
+</li>
+</ul>
+<h2 id="u53C2_u8003_u6587_u6863"><a href="#u53C2_u8003_u6587_u6863" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://developers.google.com/appengine/docs/java/tools/uploadinganapp?hl=zh-cn" target="_blank" rel="external">https://developers.google.com/appengine/docs/java/tools/uploadinganapp?hl=zh-cn</a><br><a href="https://developers.google.com/appengine/docs/java/tools/eclipse?hl=zh-cn" target="_blank" rel="external">https://developers.google.com/appengine/docs/java/tools/eclipse?hl=zh-cn</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>对于想使用云平台活着体验一下云平台的用户来说， google的appengine是一个不错的选择。 它提供了强大的功能和几乎免费的实例。对于学习来说绰绰有余。下面来简单介绍一下将自己的应用部署到appengine上的几种方法。</p>
+<p>总体来说，有两种方法：直接通过google提供的上传脚本和通过eclipse的插件两种方法来上传。</p>]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[小序Cloudcmp的network(网络任务)]]></title>
+    <link href="http://www.dullong.com/%E5%B0%8F%E5%BA%8FCloudcmp%E7%9A%84network-%E7%BD%91%E7%BB%9C%E4%BB%BB%E5%8A%A1/"/>
+    <id>http://www.dullong.com/小序Cloudcmp的network-网络任务/</id>
+    <published>2013-05-13T01:14:42.000Z</published>
+    <updated>2015-12-31T18:17:30.000Z</updated>
+    <content type="html"><![CDATA[<p>Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    </p>
+<p>对于网络性能，主要是通过tcp吞吐量和延迟来衡量的，因此本部分也是通过测量这两方面的性能来评测不同云平台的网络性能的。</p>
+<p>以下分别对带宽和延迟来分别说明</p>
+<h2 id="u5EF6_u8FDF"><a href="#u5EF6_u8FDF" class="headerlink" title="延迟"></a>延迟</h2><p>对于所有的任务来说，每个实现类均集成了基类Task，并实现重写了一些一些方法，而对于重写的方法来说，run()方法是最核心的一个方法。我们这里并不对他类是怎么写的来说明，仅仅说明其是如何实现的这一对延迟进行测量的方法。</p>
+<p>核心代码如下：</p>
+<pre><code>InetSocketAddress sockAddr = new InetSocketAddress(targetAddr, targetPort);
+// try connect
+Socket s = new Socket();
+long startTime = System.nanoTime();
+long duration;
+s.connect(sockAddr);
+duration = (System.nanoTime() - startTime) / 1000; // in microseconds
+s.close();
+</code></pre><p>其中，targetAddr和targetPort分别为地址的ip和端口号，而这一段的主要作用就是建立一个socket连接，并且连接成功所需要的时间，通过这个时间，并可以大概的计算出性能如何。通过多次进行这个方法并且求其平均值，便可以计算出某个云平台的网络延迟如何。</p>
+<h2 id="u5E26_u5BBD"><a href="#u5E26_u5BBD" class="headerlink" title="带宽"></a>带宽</h2><p>核心代码如下：</p>
+<pre><code>public long measureBandwidth(String targetAddr, long transferSize) throws IOException {
+    int targetPort;
+    if (!configs.containsKey(&quot;bw_port&quot;)) {
+        return -1;
+    }
+
+    targetPort = Integer.parseInt(configs.get(&quot;bw_port&quot;));        
+
+    InetSocketAddress sockAddr = new InetSocketAddress(targetAddr, targetPort);
+
+    Socket s = new Socket();
+    s.setTcpNoDelay(true);
+    s.setSendBufferSize(8000000); // 8MB send buffer, enough for wide-area transfer
+    byte [] buffer = new byte[8000000];
+    long startTime;
+    long duration;
+    try {
+        s.connect(sockAddr);
+        long transferred = 0;
+        InputStream is = s.getInputStream();
+        OutputStream os = s.getOutputStream();
+
+        byte [] transferSizeBytes = ByteBuffer.allocate(8).putLong(transferSize).array();            
+        os.write(transferSizeBytes); // first tell the destination how many bytes we are going to send
+        os.flush();
+
+        startTime = System.nanoTime();
+        while (transferred &lt; transferSize) {
+            os.write(buffer);
+            transferred += buffer.length;
+        }
+        os.flush();
+        is.read(); // waiting for all bytes to be received by the destination
+        duration = System.nanoTime() - startTime;
+        s.close();
+    }
+    catch (IOException ex) {
+        throw ex;
+    }
+    catch (Exception ex) {
+        ex.printStackTrace();
+        return -1;
+    }
+
+    return (long)(transferSize * 8 / ((double)duration / 1000000000));
+}
+</code></pre><p>关于带宽的计算上面，用到了与计算延迟相同的方法，只是对于延迟，不需要传输数据，而带宽则是通过多次进行传输一固定数据 transferSize ，获取操作时间来计算带宽的。关于带宽的计算公式为：带宽=传输大小*8/时间</p>
+<p>由上看来，关于Cloudcmp的网络性能方面，其做的并不是太复杂，由此可见，一个大的工程并不是都是复杂的东西堆砌出来的，对于复杂的问题，都是一个一个简单的问题组成的，当简单的问题解决了，复杂的也就自然而然的解决了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    </p>
+<p>对于网络性能，主要是通过tcp吞吐量和延迟来衡量的，因此本部分也是通过测量这两方面的性能来评测不同云平台的网络性能的。</p>
+<]]>
     </summary>
     
   </entry>
