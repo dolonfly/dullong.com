@@ -121,8 +121,8 @@
   
   <entry>
     <title><![CDATA[在Google Appengine上部署应用的几种方式]]></title>
-    <link href="http://www.dullong.com/%E5%9C%A8Google-Appengine%E4%B8%8A%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F.html"/>
-    <id>http://www.dullong.com/在Google-Appengine上部署应用的几种方式.html</id>
+    <link href="http://www.dullong.com/several-ways-to-deploy-applications-on-Google-Appengine.html"/>
+    <id>http://www.dullong.com/several-ways-to-deploy-applications-on-Google-Appengine.html</id>
     <published>2013-09-03T17:55:42.000Z</published>
     <updated>2015-12-31T18:13:02.000Z</updated>
     <content type="html"><![CDATA[<p>对于想使用云平台活着体验一下云平台的用户来说， google的appengine是一个不错的选择。 它提供了强大的功能和几乎免费的实例。对于学习来说绰绰有余。下面来简单介绍一下将自己的应用部署到appengine上的几种方法。</p>
@@ -181,8 +181,8 @@
   
   <entry>
     <title><![CDATA[小序Cloudcmp的network(网络任务)]]></title>
-    <link href="http://www.dullong.com/%E5%B0%8F%E5%BA%8FCloudcmp%E7%9A%84network-%E7%BD%91%E7%BB%9C%E4%BB%BB%E5%8A%A1.html"/>
-    <id>http://www.dullong.com/小序Cloudcmp的network-网络任务.html</id>
+    <link href="http://www.dullong.com/introduces-cloudcmp-network.html"/>
+    <id>http://www.dullong.com/introduces-cloudcmp-network.html</id>
     <published>2013-05-13T01:14:42.000Z</published>
     <updated>2015-12-31T18:17:30.000Z</updated>
     <content type="html"><![CDATA[<p>Cloudcmp 具有的三个重要的测试任务分别是：计算、存储和网络。而在本片文章中主要介绍一下其关于网络性能测试的任务。    </p>
