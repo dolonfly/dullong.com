@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '0.12'
+install:
+- npm install hexo-cli -g
+- npm install
+- npm install hexo-generator-feed --save
+- npm install hexo-deployer-git --save
+script:
+- hexo clean
+- hexo g
