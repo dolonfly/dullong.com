@@ -68,13 +68,9 @@ theme: apollo
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: git@github.com:dolonfly/dullong.com.git
-  branch: website
 - type: rsync
   host: 121.40.253.109
   user: root
   root: /data/www/dullong.com/
-  ignore_errors: true
-  delete: true
-  args: --ignore-errors
+  port: 22
+  delete: false

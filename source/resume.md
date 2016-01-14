@@ -9,7 +9,6 @@ layout: page
 
 
 
-- 手机：185-2156-5321
 
 - Email：kaixin890312@163.com
 
