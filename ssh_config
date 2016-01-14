@@ -1,4 +1,4 @@
-Host dullong.com
+Host 121.40.253.109
   User root
   StrictHostKeyChecking no
   IdentityFile ~/.ssh/id_rsa
