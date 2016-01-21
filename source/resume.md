@@ -10,7 +10,7 @@ layout: page
 
 
 
-- Email：kaixin890312@163.com
+- Email：<contact@dullong.com>
 
 - 住址：上海嘉定
 
