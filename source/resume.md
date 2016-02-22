@@ -31,7 +31,7 @@ layout: page
 
  - 本科/中原工学院计算机科学系 
 
- - 期望职位：java / 全栈
+ - 期望职位：java / Node.js / 全栈
 
  - 期望薪资：20k+
 
@@ -51,7 +51,7 @@ layout: page
 
 - 平台：Mac、Linux
 
-- 语言：Java、node.js、OC、html
+- 语言：Java、Node.js、OC、html
 
 - 云服务：阿里云、OSS、七牛、SendCloud
 
