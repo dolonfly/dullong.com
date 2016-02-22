@@ -45,7 +45,23 @@ layout: page
 
 技术宅、爱钻研、好奇心、爱学习、接收新技术快、认为语言只是工具，思想最重要
 
+具有独立完成整个项目的设计、编码、测试、部署、运维等工作的相关经验
 
+# 近期主要使用
+
+- 平台：Mac、Linux
+
+- 语言：Java、node.js、OC、html
+
+- 云服务：阿里云、OSS、七牛、SendCloud
+
+- 数据库：MySQL、MongoDB
+
+- 持续集成：jenkins、travis ci
+
+- 版本控制：git、github、gogs
+
+- 博客系统：hexo、ghost、WordPress
 
 # 工作经历
 
