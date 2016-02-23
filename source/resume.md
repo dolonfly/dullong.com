@@ -51,7 +51,7 @@ layout: page
 
 - 平台：Mac、Linux
 
-- 语言：Java、Node.js、OC、html
+- 语言：Java、Node.js、OC、html、ruby
 
 - 云服务：阿里云、OSS、七牛、SendCloud
 
