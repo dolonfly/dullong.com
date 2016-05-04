@@ -31,7 +31,7 @@ layout: page
 
  - 本科/中原工学院计算机科学系 
 
- - 期望职位：java / Node.js / 全栈
+ - 期望职位：java / Scala / Node.js / 全栈
 
  - 期望薪资：20k+
 
