@@ -1,4 +1,4 @@
-title: Install OpenOffice and running OpenOffice as service from the command line on mac osx
+title: 在 mac osx 上安装OpenOffice并以服务的方式启动
 date: 2016-06-21 22:36:59
 tags:
 ---
