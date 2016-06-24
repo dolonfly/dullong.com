@@ -7,6 +7,8 @@ tags:
 
 本文将介绍如何安装`OpenOffice`并将其作为服务启动供外部程序调用。
 
+<!-- more -->
+
 ## 安装 Homebrew 及 Homebrew-Cask
 
 `Homebrew` 是一个`Mac`上的包管理工具。使用`Homebrew`可以很轻松的安装缺少的依赖。
