@@ -11,8 +11,7 @@ script:
 - hexo d -g
 before_install:
 - mkdir -p ~/.ssh/
-- openssl aes-256-cbc -K $encrypted_4f87ed1ff5e5_key -iv $encrypted_4f87ed1ff5e5_iv
-  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_4f87ed1ff5e5_key -iv $encrypted_4f87ed1ff5e5_iv -in ./id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
