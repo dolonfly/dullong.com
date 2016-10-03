@@ -1,4 +1,4 @@
-Host 121.40.253.109
+Host 139.196.48.122
   User root
   StrictHostKeyChecking no
   IdentityFile ~/.ssh/id_rsa
