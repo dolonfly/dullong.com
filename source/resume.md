@@ -1,5 +1,5 @@
 title: 简历
-date: 2016-05-03 22:00:33
+date: 2017-01-25 22:00:33
 tags:
 layout: page
 
@@ -33,7 +33,7 @@ layout: page
 
  - 期望职位：java / Scala / Node.js / 全栈
 
- - 期望薪资：20k+
+ - 期望薪资：面议
 
  - 期望城市：上海
 
