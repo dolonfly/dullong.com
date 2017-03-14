@@ -77,7 +77,9 @@ layout: page
 
 吉小保主要作为代理人的接单工具，为客户推送计划书保单等。
 
-主要架构：Spring Boot、MySQL、maven 
+吉百翁及吉小保均包括Android端及iOS端。
+
+服务器主要架构：Spring Boot、MySQL、Redis、maven 
 
 ## 晒谷（2016年2月 ~2016年5月)
 
