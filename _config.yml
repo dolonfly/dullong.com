@@ -69,7 +69,7 @@ theme: apollo
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: rsync
-  host: 139.196.48.122
+  host: 139.224.12.203
   user: root
   root: /data/www/dullong.com/
   port: 22
